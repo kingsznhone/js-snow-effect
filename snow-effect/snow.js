@@ -18,7 +18,8 @@
     }
 
     SnowManager.prototype.init = function () {
-        this.interval = setInterval(this.updateSnowflakes.bind(this), 17);
+        framerate = 60;
+        this.interval = setInterval(this.updateSnowflakes.bind(this), 1000/framerate);
     };
 
     SnowManager.prototype.updateSnowflakes = function () {
@@ -104,4 +105,4 @@
 })();
 
 // 调用函数创建雪花
-createSnow("./", 40);
+createSnow("./snow-effect/", 40);
